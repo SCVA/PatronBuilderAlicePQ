@@ -25,8 +25,8 @@ public class PatronBuilderAlicePQ {
 
         System.out.println("Cliente realiza pedido de hamburguesa clásica con tocineta y ketchup.");
         Pedido pedido1 = mesero.tomarPedido(c1);
-        mesero.cambiarCocinero(seleccionarCocinero(pedido1.estilo));
-        System.out.println("Mesero asigna cocinero de estilo: " + pedido1.estilo);
+        mesero.cambiarCocinero(seleccionarCocinero(pedido1.getEstilo()));
+        System.out.println("Mesero asigna cocinero de estilo: " + pedido1.getEstilo());
         mesero.preparar(pedido1);
         Hamburguesa h1 = mesero.entregar();
         System.out.println("Hamburguesa preparada:");
@@ -36,7 +36,7 @@ public class PatronBuilderAlicePQ {
         // ================== Pedido 2: BBQ ==================
         System.out.println("=== Pedido 2: Hamburguesa BBQ Doble con Cebolla Crispy ===");
         Pedido p2 = new Pedido();
-        p2.estilo = "BBQ";
+        p2.setEstilo("BBQ");
         p2.termino = "3/4";
         p2.queso = "Cheddar";
         p2.vegetales = Arrays.asList("cebolla crispy");
@@ -47,8 +47,8 @@ public class PatronBuilderAlicePQ {
 
         System.out.println("Cliente realiza pedido de hamburguesa BBQ doble, término 3/4, cheddar, cebolla crispy, salsa BBQ ahumada y tocineta.");
         Pedido pedido2 = mesero.tomarPedido(c2);
-        mesero.cambiarCocinero(seleccionarCocinero(pedido2.estilo));
-        System.out.println("Mesero asigna cocinero de estilo: " + pedido2.estilo);
+        mesero.cambiarCocinero(seleccionarCocinero(pedido2.getEstilo()));
+        System.out.println("Mesero asigna cocinero de estilo: " + pedido2.getEstilo());
         mesero.preparar(pedido2);
         Hamburguesa h2 = mesero.entregar();
         System.out.println("Hamburguesa preparada:");

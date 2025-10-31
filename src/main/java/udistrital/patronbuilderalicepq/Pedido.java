@@ -3,7 +3,7 @@ package udistrital.patronbuilderalicepq;
 import java.util.*;
 
 class Pedido {
-    public String estilo = "Clasica";
+    private String estilo = "Clasica";
     public String termino = "bien cocido";
     public String queso = "Americano";
     public List<String> vegetales = new ArrayList<>(Arrays.asList("lechuga", "tomate"));
@@ -14,4 +14,14 @@ class Pedido {
     public static Pedido clasicaBasica() {
         return new Pedido();
     }
+
+    public String getEstilo() {
+        return estilo;
+    }
+
+    public void setEstilo(String estilo) {
+        this.estilo = estilo;
+    }
+    
+    
 }
