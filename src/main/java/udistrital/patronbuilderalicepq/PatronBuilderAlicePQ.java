@@ -37,7 +37,7 @@ public class PatronBuilderAlicePQ {
         System.out.println("=== Pedido 2: Hamburguesa BBQ Doble con Cebolla Crispy ===");
         Pedido p2 = new Pedido();
         p2.setEstilo("BBQ");
-        p2.termino = "3/4";
+        p2.setTermino("3/4");
         p2.queso = "Cheddar";
         p2.vegetales = Arrays.asList("cebolla crispy");
         p2.salsas = Arrays.asList("BBQ ahumada");

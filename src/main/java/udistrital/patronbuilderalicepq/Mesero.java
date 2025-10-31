@@ -19,7 +19,7 @@ class Mesero {
     public void preparar(Pedido pedido) {
         cocinero.reset();
         cocinero.tostarPan();
-        cocinero.cocinarCarne(pedido.termino);
+        cocinero.cocinarCarne(pedido.getTermino());
         cocinero.agregarQueso(pedido.queso);
         cocinero.agregarVegetales(pedido.vegetales);
         cocinero.agregarSalsas(pedido.salsas);
