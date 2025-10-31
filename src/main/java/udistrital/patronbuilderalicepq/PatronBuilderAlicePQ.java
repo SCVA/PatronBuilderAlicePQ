@@ -1,6 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package udistrital.patronbuilderalicepq;
+
 import java.util.Arrays;
 
-public class Main {
+/**
+ *
+ * @author PC
+ */
+public class PatronBuilderAlicePQ {
+
     public static void main(String[] args) {
         // Director con un cocinero por defecto (Clásica)
         Mesero mesero = new Mesero(new CocineroClasica());

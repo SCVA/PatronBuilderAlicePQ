@@ -1,25 +1,25 @@
-// ====================== CocineroBBQ (Concrete Builder) ======================
+package udistrital.patronbuilderalicepq;
+// ====================== CocineroClasica (Concrete Builder) ======================
 import java.util.*;
 
-class CocineroBBQ implements Cocinero {
+class CocineroClasica implements Cocinero {
     private Hamburguesa burg;
 
     @Override public void reset() { burg = new Hamburguesa(); }
-    @Override public void tostarPan() { burg.setTipoPan("ajonjolí"); }
+    @Override public void tostarPan() { burg.setTipoPan("clásico"); }
     @Override public void cocinarCarne(String termino) {
         burg.setProteina("res");
-        burg.setTerminoCarne(termino != null ? termino : "3/4");
+        burg.setTerminoCarne(termino != null ? termino : "bien cocido");
         burg.setPreparacionProteina("plancha");
     }
-    @Override public void freirCarne() { /* opcional: variante */ }
+    @Override public void freirCarne() { /* opcional */ }
     @Override public void empanarYFreirPollo() { /* No aplica */ }
-
-    @Override public void agregarQueso(String tipo) { burg.addQueso(tipo != null ? tipo : "Cheddar"); }
+    @Override public void agregarQueso(String tipo) { burg.addQueso(tipo != null ? tipo : "Americano"); }
     @Override public void agregarVegetales(List<String> lista) {
-        burg.addVegetales(lista != null ? lista : Arrays.asList("cebolla crispy"));
+        burg.addVegetales(lista != null ? lista : Arrays.asList("lechuga", "tomate"));
     }
     @Override public void agregarSalsas(List<String> lista) {
-        List<String> base = new ArrayList<>(Arrays.asList("BBQ"));
+        List<String> base = new ArrayList<>(Arrays.asList("mayonesa"));
         if (lista != null) base.addAll(lista);
         burg.addSalsas(base);
     }

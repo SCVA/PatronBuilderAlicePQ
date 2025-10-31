@@ -1,3 +1,4 @@
+package udistrital.patronbuilderalicepq;
 // ====================== Cliente ======================
 class Cliente {
     private Pedido pedido;
